@@ -12,7 +12,7 @@ pipeline {
 				sh 'pwd'
 				dir("DotnetTemplate.Web") {
 					sh 'pwd'
-					echo $DOTNET_CLI_HOME
+					sh 'echo $DOTNET_CLI_HOME'
 					sh 'dotnet build'
 				}
 			}
