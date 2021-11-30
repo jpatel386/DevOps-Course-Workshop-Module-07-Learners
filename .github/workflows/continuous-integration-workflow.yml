@@ -12,4 +12,10 @@ jobs:
         dotnet-version: '6.0.x'
     - run: dotnet build 
 
+    - name: npm install and build
+      working-directory: ./DotnetTemplate.Web
+      run: |
+        npm install
+        npm run build
 
+   
