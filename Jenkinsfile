@@ -8,7 +8,7 @@ pipeline {
 			}
 			steps {
 				echo 'Building dotnet...'
-				env.DOTNET_CLI_HOME="/tmp/dotnet_cli_home"
+				env['DOTNET_CLI_HOME'] = "/tmp/dotnet_cli_home"
 				sh 'pwd'
 				dir("DotnetTemplate.Web") {
 					sh 'pwd'
