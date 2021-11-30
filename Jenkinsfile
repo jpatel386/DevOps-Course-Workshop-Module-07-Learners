@@ -16,7 +16,6 @@ pipeline {
 				sh 'pwd'
 				dir("DotnetTemplate.Web") {
 					sh 'pwd'
-					sh 'echo $DOTNET_CLI_HOME'
 					sh 'dotnet build'
 				}
 			}
@@ -30,7 +29,7 @@ pipeline {
 				sh 'pwd'
 				dir("DotnetTemplate.Web") {
 					sh 'pwd'
-					sh 'npm install'
+					sh 'npm ci'
 					sh 'npm run build'
 				}
 			}
