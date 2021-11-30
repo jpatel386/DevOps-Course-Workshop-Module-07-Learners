@@ -8,7 +8,7 @@ pipeline {
 			}
 			steps {
 				echo 'Building dotnet...'
-				sh 'export DOTNET_CLI_HOME="/tmp/dotnet_cli_home"'
+				sh 'DOTNET_CLI_HOME=/tmp/dotnet_cli_home'
 				sh 'pwd'
 				dir("DotnetTemplate.Web") {
 					sh 'pwd'
