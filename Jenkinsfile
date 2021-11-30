@@ -22,7 +22,7 @@ pipeline {
 		}
 		stage('Build npm') {
 			agent {
-				docker { image 'node:17-alpine' }
+				docker { image 'node:17-bullseye' }
 			}
 			steps {
 				echo 'Building npm...'
@@ -31,6 +31,7 @@ pipeline {
 					sh 'pwd'
 					sh 'npm ci'
 					sh 'npm run build'
+					sh 'npm t'
 				}
 			}
 		}
