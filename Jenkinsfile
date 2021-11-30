@@ -17,6 +17,7 @@ pipeline {
 				dir("DotnetTemplate.Web") {
 					sh 'pwd'
 					sh 'dotnet build'
+					sh 'dotnet test'
 				}
 			}
 		}
@@ -31,6 +32,7 @@ pipeline {
 					sh 'pwd'
 					sh 'npm ci'
 					sh 'npm run build'
+					sh 'npm run lint'
 					sh 'npm t'
 				}
 			}
