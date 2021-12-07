@@ -35,7 +35,8 @@ pipeline {
 							sh 'npm ci'
 							sh 'npm run build'
 							sh 'npm run lint'
-							sh 'npm t'
+							sh 'npm run test-with-coverage'
+							
 						}
 					}
 				}
