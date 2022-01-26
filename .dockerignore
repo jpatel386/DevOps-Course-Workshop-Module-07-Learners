@@ -1,0 +1,3 @@
+Dockerfile
+.dockerignore
+DotnetTemplate.Web/node_modules
